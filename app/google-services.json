@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "754252717892",
+    "firebase_url": "https://coursework-1-b7632.firebaseio.com",
+    "project_id": "coursework-1-b7632",
+    "storage_bucket": "coursework-1-b7632.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754252717892:android:aa000fac7a84df90090111",
+        "android_client_info": {
+          "package_name": "ru.andvl.arapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754252717892-l7ng2e2hfnpum0nnknlfga9a5hjlot93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQGeH-vXP5PxZUDk8e-aR-aseXEprKg0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754252717892-l7ng2e2hfnpum0nnknlfga9a5hjlot93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
