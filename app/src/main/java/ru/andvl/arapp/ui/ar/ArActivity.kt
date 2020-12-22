@@ -1,4 +1,4 @@
-package ru.andvl.arapp.ui
+package ru.andvl.arapp.ui.ar
 
 import android.app.Activity
 import android.app.ActivityManager
@@ -43,7 +43,7 @@ class ArActivity : AppCompatActivity() {
         buildModel(mModelLink)
 
         mArFragment.setOnTapArPlaneListener { hitResult, plane, motionEvent ->
-            placeObject(hitResult, plane, motionEvent)
+            placeRotatableObject(hitResult, plane, motionEvent)
         }
     }
 
@@ -54,7 +54,7 @@ class ArActivity : AppCompatActivity() {
                 this,
                 Uri.parse(modelLink),
                 RenderableSource.SourceType.GLTF2)
-                .setScale(.1f)
+                .setScale(.25f)
                 .build()
             ).build()
             .thenAccept { renderable -> mModelRenderable = renderable }
@@ -74,6 +74,21 @@ class ArActivity : AppCompatActivity() {
         model.setParent(anchorNode)
         model.renderable = mModelRenderable
         model.select()
+    }
+
+    private fun placeRotatableObject(hitResult: HitResult, plane: Plane, motionEvent: MotionEvent) {
+        val anchor = hitResult.createAnchor()
+        val anchorNode = AnchorNode(anchor)
+//        anchorNode.setParent(mArFragment.arSceneView.scene)
+        val rotatingNode = RotatingNode()
+
+        val transformableNode = TransformableNode(mArFragment.transformationSystem)
+
+        rotatingNode.renderable = mModelRenderable
+        rotatingNode.addChild(transformableNode)
+        rotatingNode.setParent(anchorNode)
+        mArFragment.arSceneView.scene.addChild(anchorNode)
+        transformableNode.select()
     }
 
     private fun addNodeToScene() {}

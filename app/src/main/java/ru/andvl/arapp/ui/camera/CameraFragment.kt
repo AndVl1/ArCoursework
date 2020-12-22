@@ -28,6 +28,10 @@ private const val ARG_MODEL_LINK = "param1"
  * A simple [Fragment] subclass.
  * Use the [CameraFragment.newInstance] factory method to
  * create an instance of this fragment.
+ *
+ * -- As a result, it is not needed here. But probably
+ * I will try to connect it with summer practice
+ * project, so I won't delete it now
  */
 class CameraFragment : Fragment() {
     private var mPreviewView: PreviewView? = null
@@ -36,7 +40,6 @@ class CameraFragment : Fragment() {
     private var mCamera: Camera? = null
     private var mCurrentLens = CameraSelector.LENS_FACING_BACK
 
-    private lateinit var mArFragment: ArFragment
     private lateinit var mBinding: FragmentCameraBinding
 
     @Inject
@@ -60,18 +63,12 @@ class CameraFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mArFragment = fragmentManager?.findFragmentByTag("sceneform_fragment") as ArFragment
-
-        mArFragment.arSceneView.scene.addOnUpdateListener { frameTime ->
-            mArFragment.onUpdate(frameTime)
+        mPreviewView = view.findViewById(R.id.camera_captureView)
+        if (allPermissionsGranted()) {
+            startCamera(mCurrentLens)
+        } else {
+            requestPermissions(REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSION)
         }
-
-//        mPreviewView = view.findViewById(R.id.camera_captureView)
-//        if (allPermissionsGranted()) {
-//            startCamera(mCurrentLens)
-//        } else {
-//            requestPermissions(REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSION)
-//        }
     }
 
     override fun onRequestPermissionsResult(

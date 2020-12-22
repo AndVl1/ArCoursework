@@ -9,16 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import coil.load
 import com.github.terrakok.cicerone.Router
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import ru.andvl.arapp.R
-import ru.andvl.arapp.Screens
 
 import ru.andvl.arapp.models.ModelsListContent.ListItem
-import ru.andvl.arapp.mvp.main.ArModelsPresenter
-import ru.andvl.arapp.ui.ArActivity
-import javax.inject.Inject
+import ru.andvl.arapp.ui.ar.ArActivity
 
 /**
  * [RecyclerView.Adapter] that can display a [ListItem].

@@ -6,21 +6,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.camera.CameraFragment">
 
-<!--    <androidx.camera.view.PreviewView-->
-<!--        android:id="@+id/camera_captureView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:contentDescription="@string/camera_preview"-->
-<!--        android:importantForAccessibility="no"/>-->
-
-    <fragment
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_captureView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/sceneform_fragment"
-        android:name="com.google.ar.sceneform.ux.ArFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:contentDescription="@string/camera_preview"
+        android:importantForAccessibility="no"/>
+
+<!--    <fragment-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/sceneform_fragment"-->
+<!--        android:name="com.google.ar.sceneform.ux.ArFragment"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
