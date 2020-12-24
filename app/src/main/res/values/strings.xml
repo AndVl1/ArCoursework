@@ -3,4 +3,5 @@
     <string name="item_preview_description">Preview of a model</string>
     <string name="camera_preview">Camera Preview</string>
     <string name="permissions_error">NOT ALL PERMISSIONS GRANTED</string>
+    <string name="take_image_btn">Take image</string>
 </resources>

@@ -12,7 +12,6 @@ import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import ru.andvl.arapp.App
 import ru.andvl.arapp.R
-import ru.andvl.arapp.databinding.FragmentModelsBinding
 import ru.andvl.arapp.databinding.FragmentModelsListBinding
 import ru.andvl.arapp.models.ModelsListContent
 import ru.andvl.arapp.mvp.main.ArModelsPresenter

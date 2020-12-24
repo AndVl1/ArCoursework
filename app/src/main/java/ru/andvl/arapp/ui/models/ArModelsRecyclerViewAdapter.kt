@@ -24,10 +24,7 @@ class ArModelsRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_models, parent, false)
-        view.setOnClickListener {
-
-        }
+            .inflate(R.layout.models_list_element, parent, false)
         return ViewHolder(view, router)
     }
 

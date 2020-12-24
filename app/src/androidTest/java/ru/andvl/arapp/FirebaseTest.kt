@@ -2,6 +2,7 @@ package ru.andvl.arapp
 
 import android.util.Log
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,6 +16,6 @@ class FirebaseTest {
         ModelsListContent.ITEMS.forEach {
             Log.d("list item", it.toString())
         }
-        Thread.sleep(5000)
+        delay(5000)
     }
 }

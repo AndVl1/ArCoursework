@@ -78,7 +78,7 @@ class RotatingNode: Node(), Node.OnTapListener {
     }
 
     private fun createAnimator(): ObjectAnimator {
-// Node's setLocalRotation method accepts Quaternions as parameters.
+        // Node's setLocalRotation method accepts Quaternions as parameters.
         // First, set up orientations that will animate a circle.
         val orientation1 = Quaternion.axisAngle(Vector3(0.0f, 1.0f, 0.0f), 0f)
         val orientation2 = Quaternion.axisAngle(Vector3(0.0f, 1.0f, 0.0f), 120f)
@@ -86,7 +86,8 @@ class RotatingNode: Node(), Node.OnTapListener {
         val orientation4 = Quaternion.axisAngle(Vector3(0.0f, 1.0f, 0.0f), 360f)
 
         val rotationAnimation = ObjectAnimator()
-        rotationAnimation.setObjectValues(orientation1, orientation2, orientation3, orientation4)
+        rotationAnimation.setObjectValues(orientation1, orientation2,
+                orientation3, orientation4)
 
         // Next, give it the localRotation property.
         rotationAnimation.setPropertyName("localRotation")
@@ -103,7 +104,5 @@ class RotatingNode: Node(), Node.OnTapListener {
         return rotationAnimation
     }
 
-    override fun onTap(p0: HitTestResult?, p1: MotionEvent?) {
-
-    }
+    override fun onTap(p0: HitTestResult?, p1: MotionEvent?) {}
 }
