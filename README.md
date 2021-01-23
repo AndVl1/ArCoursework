@@ -4,4 +4,4 @@
 
 #### Мобильное приложение для отображения объекта в дополненной реальности
 
-[Расчетно-пояснительная записка (.pdf)](https://cdn.discordapp.com/attachments/780202071630544939/791783659265851412/coursework_graphics_Vladislavov.pdf])
+[Расчетно-пояснительная записка (.pdf)](https://drive.google.com/file/d/1LlEBQepx4_Nl8HflqUIfBmv2RMUBC3X7/view?usp=sharing)
